@@ -1,0 +1,17 @@
+@use '../variables.scss' as *;
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    margin: 3em 7em;
+    background: linear-gradient(180deg,
+            #050b21,
+            #0a1640);
+}

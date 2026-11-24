@@ -1,0 +1,26 @@
+@use '/variables.scss' as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+    color: #fff;
+
+    .title {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .nav {
+        display: flex;
+        gap: 1em;
+
+        .link {
+            border: 0.01px solid #555a6b;
+            border-radius: 30px;
+            padding: 0.4em 1.2em;
+            background-color: #2e344a;
+        }
+    }
+}

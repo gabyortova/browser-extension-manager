@@ -1,0 +1,72 @@
+@use '/variables.scss' as *;
+
+.extensionElement {
+    padding: 1em;
+    background-color: $surface-color;
+    color: #fff;
+    border-radius: $border-radius;
+
+    .info {
+        display: flex;
+        gap: 1em;
+        align-items: flex-start;
+        margin-bottom: 1em;
+    }
+
+    .text {
+        h2 {
+            margin-bottom: 0.3em;
+        }
+
+        // p {
+        //     // color: ;
+        // }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 17px;
+
+        input {
+            display: none;
+
+            &:checked {
+                +.slider {
+                    background: $active-color;
+
+                    &:before {
+                        transform: translateX(13px);
+                    }
+                }
+            }
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: #777;
+            border-radius: 30px;
+            transition: 0.3s;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 13px;
+                width: 13px;
+                left: 2px;
+                bottom: 2px;
+                background: white;
+                border-radius: 50%;
+                transition: 0.3s;
+            }
+        }
+    }
+}
