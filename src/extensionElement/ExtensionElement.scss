@@ -5,12 +5,13 @@
     background-color: $surface-color;
     color: #fff;
     border-radius: $border-radius;
+    border: $border;
 
     .info {
         display: flex;
         gap: 1em;
         align-items: flex-start;
-        margin-bottom: 1em;
+        margin-bottom: 2.5em;
     }
 
     .text {
@@ -18,14 +19,20 @@
             margin-bottom: 0.3em;
         }
 
-        // p {
-        //     // color: ;
-        // }
+        p {
+            color: #b5b8be;
+        }
     }
 
     .buttons {
         display: flex;
         justify-content: space-between;
+
+        button {
+            padding: $buttons-padding;
+            border: $border;
+            border-radius: $border-radius;
+        }
     }
 
     .switch {

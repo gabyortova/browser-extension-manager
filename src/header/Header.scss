@@ -17,9 +17,9 @@
         gap: 1em;
 
         .link {
-            border: 0.01px solid #555a6b;
+            border: $border;
             border-radius: 30px;
-            padding: 0.4em 1.2em;
+            padding: $buttons-padding;
             background-color: #2e344a;
         }
     }
