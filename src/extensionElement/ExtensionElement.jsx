@@ -4,7 +4,8 @@ import './ExtensionElement.scss'
 function ExtensionElement({ logo,
     name,
     description,
-    isActive }) {
+    isActive,
+    removeExtensionHandler }) {
 
     const [isActiveState, setIsActiveState] = useState(isActive);
 
@@ -20,7 +21,9 @@ function ExtensionElement({ logo,
             </div>
 
             <div className='buttons'>
-                <button>Remove</button>
+                <button onClick={() => removeExtensionHandler(name)}>
+                    Remove
+                </button>
                 <label className="switch">
                     <input
                         type="checkbox"

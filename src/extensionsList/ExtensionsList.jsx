@@ -25,6 +25,12 @@ function ExtensionsList() {
         return true;
     });
 
+    const removeExtensionHandler = (name) => {
+        setJsonData((prev) =>
+            prev.filter((data) => data.name !== name)
+        );
+    };
+
     return (
         <section>
             <Header activeBtnName={activeBtnName} onBtnLinkHandler={onBtnLinkHandler} />
@@ -37,6 +43,7 @@ function ExtensionsList() {
                         name={extension.name}
                         description={extension.description}
                         isActive={extension.isActive}
+                        removeExtensionHandler={removeExtensionHandler}
                     />
                 ))}
             </section>
