@@ -4,6 +4,7 @@ import ExtensionElement from '../extensionElement/ExtensionElement';
 import './ExtensionsList.scss';
 
 function ExtensionsList() {
+    const [activeBtnName, setActiveBtnName] = useState('All');
 
     const [jsonData, setJsonData] = useState([]);
 
@@ -13,13 +14,25 @@ function ExtensionsList() {
             .then(data => setJsonData(data));
     }, []);
 
+    const onBtnLinkHandler = (name) => {
+        setActiveBtnName(name);
+    }
+
+    const filteredData = jsonData.filter((extension) => {
+        if (activeBtnName === 'Active') return extension.isActive;
+        if (activeBtnName === 'Inactive') return !extension.isActive;
+
+        return true;
+    });
+
     return (
-        <>
-            <Header />
+        <section>
+            <Header activeBtnName={activeBtnName} onBtnLinkHandler={onBtnLinkHandler} />
+
             <section className='extensionsList'>
-                {jsonData.map((extension, index) => (
+                {filteredData.map((extension) => (
                     <ExtensionElement
-                        key={index}
+                        key={extension.name}
                         logo={extension.logo}
                         name={extension.name}
                         description={extension.description}
@@ -27,7 +40,7 @@ function ExtensionsList() {
                     />
                 ))}
             </section>
-        </>
+        </section>
     )
 }
 

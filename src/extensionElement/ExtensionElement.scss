@@ -4,8 +4,8 @@
     padding: 1em;
     background-color: $surface-color;
     color: #fff;
-    border-radius: $border-radius;
     border: $border;
+    border-radius: $border-radius;
 
     .info {
         display: flex;
@@ -27,6 +27,7 @@
     .buttons {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         button {
             padding: $buttons-padding;
@@ -59,7 +60,7 @@
             position: absolute;
             cursor: pointer;
             inset: 0;
-            background: #777;
+            background: #525867;
             border-radius: 30px;
             transition: 0.3s;
 
@@ -70,7 +71,7 @@
                 width: 13px;
                 left: 2px;
                 bottom: 2px;
-                background: white;
+                background: #fff;
                 border-radius: 50%;
                 transition: 0.3s;
             }

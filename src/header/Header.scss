@@ -22,5 +22,11 @@
             padding: $buttons-padding;
             background-color: #2e344a;
         }
+
+        .link.activeBtn {
+            background-color: $active-color;
+            color: $surface-color;
+            border: none;
+        }
     }
 }
