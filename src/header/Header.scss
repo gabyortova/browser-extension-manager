@@ -21,6 +21,11 @@
             border-radius: 30px;
             padding: $buttons-padding;
             background-color: #2e344a;
+
+            &:focus-visible {
+                outline: 2px solid $active-color;
+                outline-offset: 2px;
+            }
         }
 
         .link.activeBtn {

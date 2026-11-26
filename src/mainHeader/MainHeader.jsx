@@ -6,7 +6,9 @@ function MainHeader() {
         <header className="mainHeader">
             <img src="../assets/images/logo.svg" alt="logo" className='mainHeaderImg' />
 
-            <img src="../assets/images/icon-sun.svg" alt="icon-sun" className='mainHeaderImgSun' />
+            <button className='mainHeaderImgSunBtn'>
+                <img src="../assets/images/icon-sun.svg" alt="icon-sun" />
+            </button>
         </header>
 
 

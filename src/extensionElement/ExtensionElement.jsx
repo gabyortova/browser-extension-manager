@@ -20,7 +20,7 @@ function ExtensionElement({ logo,
             </div>
 
             <div className='buttons'>
-                <button onClick={() => removeExtensionHandler(name)}>
+                <button className='removeBtn' onClick={() => removeExtensionHandler(name)}>
                     Remove
                 </button>
                 <label className="switch">

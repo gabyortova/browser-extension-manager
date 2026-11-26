@@ -29,10 +29,15 @@
         justify-content: space-between;
         align-items: center;
 
-        button {
+        .removeBtn {
             padding: $buttons-padding;
             border: $border;
             border-radius: $border-radius;
+
+            &:focus-visible {
+                outline: 2px solid $active-color;
+                outline-offset: 1px;
+            }
         }
     }
 
@@ -43,15 +48,19 @@
         height: 17px;
 
         input {
-            display: none;
+            position: absolute;
+            opacity: 0;
 
-            &:checked {
-                +.slider {
-                    background: $active-color;
+            &:focus-visible+.slider {
+                outline: 2px solid $active-color;
+                outline-offset: 2px;
+            }
 
-                    &:before {
-                        transform: translateX(13px);
-                    }
+            &:checked+.slider {
+                background: $active-color;
+
+                &:before {
+                    transform: translateX(13px);
                 }
             }
         }
