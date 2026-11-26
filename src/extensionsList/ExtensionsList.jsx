@@ -31,6 +31,16 @@ function ExtensionsList() {
         );
     };
 
+    const clickActiveBtnHandler = (name) => {
+        setJsonData(prev =>
+            prev.map(extension =>
+                extension.name === name
+                    ? { ...extension, isActive: !extension.isActive }
+                    : extension
+            )
+        );
+    };
+
     return (
         <section>
             <Header activeBtnName={activeBtnName} onBtnLinkHandler={onBtnLinkHandler} />
@@ -44,6 +54,7 @@ function ExtensionsList() {
                         description={extension.description}
                         isActive={extension.isActive}
                         removeExtensionHandler={removeExtensionHandler}
+                        clickActiveBtnHandler={clickActiveBtnHandler}
                     />
                 ))}
             </section>

@@ -5,9 +5,8 @@ function ExtensionElement({ logo,
     name,
     description,
     isActive,
-    removeExtensionHandler }) {
-
-    const [isActiveState, setIsActiveState] = useState(isActive);
+    removeExtensionHandler,
+    clickActiveBtnHandler }) {
 
     return (
         <section className="extensionElement">
@@ -27,8 +26,8 @@ function ExtensionElement({ logo,
                 <label className="switch">
                     <input
                         type="checkbox"
-                        checked={isActiveState}
-                        onChange={() => setIsActiveState(!isActiveState)}
+                        checked={isActive}
+                        onChange={() => clickActiveBtnHandler(name)}
                     />
                     <span className="slider"></span>
                 </label>
