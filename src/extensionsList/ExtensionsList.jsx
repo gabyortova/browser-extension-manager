@@ -26,6 +26,12 @@ function ExtensionsList() {
     });
 
     const removeExtensionHandler = (name) => {
+        const remove = window.confirm('Are you sure you want to remove this extension?');
+
+        if (!remove) {
+            return;
+        }
+        
         setJsonData((prev) =>
             prev.filter((data) => data.name !== name)
         );
