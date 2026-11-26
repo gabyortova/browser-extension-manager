@@ -38,6 +38,11 @@
                 outline: 2px solid $active-color;
                 outline-offset: 1px;
             }
+
+            &:hover {
+                background-color: $active-color;
+                color: $surface-color;
+            }
         }
     }
 

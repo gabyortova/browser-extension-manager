@@ -26,5 +26,9 @@
             outline-offset: 2px;
             background-color: #525769;
         }
+
+        &:hover {
+            background-color: $hover-color;
+        }
     }
 }

@@ -10,8 +10,6 @@ function MainHeader() {
                 <img src="../assets/images/icon-sun.svg" alt="icon-sun" />
             </button>
         </header>
-
-
     )
 }
 
