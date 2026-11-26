@@ -1,13 +1,18 @@
 import './MainHeader.scss'
 
-function MainHeader() {
+function MainHeader({ toggleTheme, theme }) {
+    const iconSvg = theme === 'dark' ? 'icon-sun.svg' : 'icon-moon.svg';
+
+    const logo = theme === 'dark'
+        ? 'logo-dark.svg'
+        : 'logo-light.svg';
 
     return (
         <header className="mainHeader">
-            <img src="../assets/images/logo.svg" alt="logo" className='mainHeaderImg' />
+            <img src={`../assets/images/${logo}`} alt="logo" className='mainHeaderLogo' />
 
-            <button className='mainHeaderImgSunBtn'>
-                <img src="../assets/images/icon-sun.svg" alt="icon-sun" />
+            <button className='mainHeaderThemeBtn' onClick={toggleTheme}>
+                <img src={`../assets/images/${iconSvg}`} alt={iconSvg} />
             </button>
         </header>
     )

@@ -2,8 +2,7 @@
 
 .extensionElement {
     padding: 1em;
-    background-color: $surface-color;
-    color: #fff;
+    background-color: var(--surface-color);
     border: $border;
     border-radius: $border-radius;
 
@@ -17,10 +16,11 @@
     .text {
         h2 {
             margin-bottom: 0.3em;
+            font-weight: bold;
         }
 
         p {
-            color: #b5b8be;
+            color: var(--secondary-text-color);
         }
     }
 
@@ -35,13 +35,14 @@
             border-radius: $border-radius;
 
             &:focus-visible {
-                outline: 2px solid $active-color;
+                outline: 2px solid var(--active-color);
                 outline-offset: 1px;
+                background-color: var(--focus-color);
             }
 
             &:hover {
-                background-color: $active-color;
-                color: $surface-color;
+                background-color: var(--active-color);
+                color: var(--surface-color);
             }
         }
     }
@@ -57,16 +58,20 @@
             opacity: 0;
 
             &:focus-visible+.slider {
-                outline: 2px solid $active-color;
+                outline: 2px solid var(--active-color);
                 outline-offset: 2px;
             }
 
             &:checked+.slider {
-                background: $active-color;
+                background: var(--active-color);
 
                 &:before {
                     transform: translateX(13px);
                 }
+            }
+
+            &:hover:checked+.slider {
+                background-color: var(--switch-hover-color);
             }
         }
 
@@ -74,7 +79,7 @@
             position: absolute;
             cursor: pointer;
             inset: 0;
-            background: #525867;
+            background: var(--switch-inactive-color);
             border-radius: 30px;
             transition: 0.3s;
 
@@ -85,7 +90,7 @@
                 width: 13px;
                 left: 2px;
                 bottom: 2px;
-                background: #fff;
+                background: var(--switch-thumb-color);
                 border-radius: 50%;
                 transition: 0.3s;
             }

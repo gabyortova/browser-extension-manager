@@ -5,7 +5,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 3em;
-    color: #fff;
 
     @media (max-width: $smallScreen) {
         flex-direction: column;
@@ -25,25 +24,26 @@
             border: $border;
             border-radius: 30px;
             padding: $buttons-padding;
-            background-color: #2e344a;
+            background-color: var(--nav-link-background);
 
             &:focus-visible {
-                outline: 2px solid $active-color;
+                outline: 2px solid var(--active-color);
                 outline-offset: 2px;
             }
 
             &:hover {
-                background-color: $hover-color;
+                background-color: var(--hover-color);
+                color: var(--hover-text-color);
             }
         }
 
         .link.activeBtn {
-            background-color: $active-color;
-            color: $surface-color;
+            background-color: var(--active-color);
+            color: var(--surface-color);
             border: none;
 
             &:hover {
-                background-color: #df4841;
+                background-color: var(--active-btn-hover-background);
             }
         }
     }

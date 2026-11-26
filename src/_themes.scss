@@ -1,0 +1,42 @@
+:root,
+[data-theme='dark'] {
+    --background-gradient: linear-gradient(180deg,
+            #050b21,
+            #0a1640);
+    --surface-color: #1f2535;
+    --text-color: #fff;
+    --secondary-text-color: #b5b8be;
+    --hover-color: #555a6b;
+    --focus-color: var(--hover-color);
+    --hover-text-color: #fff;
+    --theme-btn-hover-color: var(--hover-color);
+    --border-color: var(--hover-color);
+    --active-btn-hover-background: #df4841;
+    --active-color: #f45a55;
+    --switch-inactive-color: #525867;
+    --switch-thumb-color: #fff;
+    --switch-hover-color: #dd4742;
+    --secondary-background: #2e344a;
+    --nav-link-background: var(--secondary-background);
+}
+
+[data-theme='light'] {
+    --background-gradient: linear-gradient(180deg,
+            #ebf2fc,
+            #effbf9);
+    --surface-color: #fcfdff;
+    --text-color: #1f2535;
+    --secondary-text-color: #626366;
+    --hover-color: #f6f9fd;
+    --focus-color: #eeeeee;
+    --hover-text-color: var(--secondary-text-color);
+    --theme-btn-hover-color: #c6c6c6;
+    --border-color: #e3e4e6;
+    --active-btn-hover-background: #df4841;
+    --active-color: #c72219;
+    --switch-inactive-color: var(--theme-btn-hover-color);
+    --switch-thumb-color: #fff;
+    --switch-hover-color: #dd483c;
+    --secondary-background: #edeeee;
+    --nav-link-background: var(--surface-color);
+}

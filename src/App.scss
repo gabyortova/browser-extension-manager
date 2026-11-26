@@ -1,4 +1,5 @@
 @use '../variables.scss' as *;
+@use './themes.scss';
 
 .attribution {
     font-size: 0.6875rem;
@@ -11,9 +12,8 @@
 
 body {
     margin: 3em 7em;
-    background: linear-gradient(180deg,
-            #050b21,
-            #0a1640);
+    background: var(--background-gradient);
+    color: var(--text-color);
 
     @media (max-width: $smallScreen) {
         margin: 2em 1em;

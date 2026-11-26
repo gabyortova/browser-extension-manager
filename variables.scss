@@ -1,7 +1,4 @@
 $smallScreen: 690px;
-$surface-color: #1f2535;
 $border-radius: 20px;
-$hover-color: #555a6b;
-$border: 0.01px solid $hover-color;
+$border: 0.01px solid var(--border-color);
 $buttons-padding: 0.4em 1.2em;
-$active-color: #f45a55;
