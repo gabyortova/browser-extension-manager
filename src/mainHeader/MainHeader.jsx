@@ -15,7 +15,10 @@ function MainHeader({ toggleTheme, theme }) {
                 className="mainHeaderLogo"
             />
             <button className='mainHeaderThemeBtn' onClick={toggleTheme}>
-                <img src={`../assets/images/${iconSvg}`} alt={iconSvg} />
+                <img
+                    src={`${import.meta.env.BASE_URL}assets/images/${iconSvg}`}
+                    alt={iconSvg}
+                />
             </button>
         </header>
     )

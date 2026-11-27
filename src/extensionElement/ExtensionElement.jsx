@@ -11,7 +11,10 @@ function ExtensionElement({ logo,
     return (
         <section className="extensionElement">
             <div className='info'>
-                <img src={logo} alt={name} />
+                <img
+                    src={`${import.meta.env.BASE_URL}${logo.replace(/^\.?\//, '')}`}
+                    alt={name}
+                />
 
                 <div className='text'>
                     <h2>{name}</h2>
