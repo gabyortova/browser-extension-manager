@@ -9,8 +9,11 @@ function MainHeader({ toggleTheme, theme }) {
 
     return (
         <header className="mainHeader">
-            <img src={`../assets/images/${logo}`} alt="logo" className='mainHeaderLogo' />
-
+            <img
+                src={`${import.meta.env.BASE_URL}assets/images/${logo}`}
+                alt="logo"
+                className="mainHeaderLogo"
+            />
             <button className='mainHeaderThemeBtn' onClick={toggleTheme}>
                 <img src={`../assets/images/${iconSvg}`} alt={iconSvg} />
             </button>

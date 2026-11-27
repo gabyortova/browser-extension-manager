@@ -9,7 +9,7 @@ function ExtensionsList() {
     const [jsonData, setJsonData] = useState([]);
 
     useEffect(() => {
-        fetch('/data.json')
+        fetch(`${import.meta.env.BASE_URL}data.json`)
             .then(res => res.json())
             .then(data => setJsonData(data));
     }, []);
@@ -31,7 +31,7 @@ function ExtensionsList() {
         if (!remove) {
             return;
         }
-        
+
         setJsonData((prev) =>
             prev.filter((data) => data.name !== name)
         );
